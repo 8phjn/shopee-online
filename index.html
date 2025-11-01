@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เว็บขายของ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- หน้าล็อกอิน -->
+  <div id="login-page" class="page">
+    <h2>เข้าสู่ระบบ</h2>
+    <input type="text" id="username" placeholder="ชื่อผู้ใช้">
+    <input type="password" id="password" placeholder="รหัสผ่าน">
+    <button onclick="login()">เข้าสู่ระบบ</button>
+    <p>ยังไม่มีบัญชี? <span onclick="showRegister()">ลงทะเบียน</span></p>
+  </div>
+
+  <!-- หน้า register -->
+  <div id="register-page" class="page" style="display:none;">
+    <h2>ลงทะเบียน</h2>
+    <input type="text" id="new-username" placeholder="ชื่อผู้ใช้">
+    <input type="password" id="new-password" placeholder="รหัสผ่าน">
+    <button onclick="register()">ลงทะเบียน</button>
+    <p>มีบัญชีแล้ว? <span onclick="showLogin()">เข้าสู่ระบบ</span></p>
+  </div>
+
+  <!-- หน้า shop -->
+  <div id="shop-page" class="page" style="display:none;">
+    <h2>ร้านค้า</h2>
+    <div id="products"></div>
+    <h3>ตะกร้าสินค้า</h3>
+    <div id="cart"></div>
+    <p>รวมทั้งหมด: <span id="total">0</span> บาท</p>
+    <button onclick="checkout()">ชำระเงิน</button>
+    <button onclick="logout()">ออกจากระบบ</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
